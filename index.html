@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastian - Mi Bautizo y Cumpleaños</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Fredoka:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Bungee&family=Fredoka:wght@400;500;600&display=swap');
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -28,14 +28,21 @@
             text-align: center;
         }
         .titulo-principal {
-            font-family: 'Lilita One', cursive; color: #c41e1e; font-size: 3.8em;
-            letter-spacing: 1px; margin: 15px 0; line-height: 1;
-            text-shadow: -4px -4px 0 #f9a825, 4px -4px 0 #f9a825, -4px 4px 0 #f9a825, 4px 4px 0 #f9a825, 6px 0px #5d1a1a;
+            font-family: 'Rye', cursive; color: #c41e1e; font-size: 3.6em;
+            letter-spacing: 3px; margin: 15px 0; line-height: 0.9;
+            text-shadow: 
+                -2px -2px 0 #f9a825,  
+                2px -2px 0 #f9a825,
+                -2px 2px 0 #f9a825,
+                2px 2px 0 #f9a825,
+                0px 6px 0 #5d1a1a,
+                6px 6px 0 #5d1a1a;
             text-transform: uppercase;
+            -webkit-text-stroke: 1px #8b0000;
         }
         .subtitulo-evento {
-            font-family: 'Lilita One', cursive; color: #5d4037; font-size: 1.7em;
-            margin-bottom: 20px; letter-spacing: 0.5px; display: flex;
+            font-family: 'Bungee', cursive; color: #5d4037; font-size: 1.4em;
+            margin-bottom: 20px; letter-spacing: 1px; display: flex;
             align-items: center; justify-content: center; gap: 12px; flex-wrap: nowrap;
             text-transform: uppercase;
         }
@@ -48,8 +55,8 @@
             box-shadow: inset 0 0 20px rgba(121, 85, 72, 0.15); text-align: left;
         }
         .evento-box h3 { 
-            font-family: 'Lilita One', cursive; color: #a52a2a; 
-            font-size: 2em; margin-bottom: 18px; text-align: center; text-transform: uppercase;
+            font-family: 'Bungee', cursive; color: #a52a2a; 
+            font-size: 1.7em; margin-bottom: 18px; text-align: center; text-transform: uppercase;
         }
         .evento-box p { 
             margin: 14px 0; font-size: 1.2em; font-weight: 500; line-height: 1.6; 
@@ -58,8 +65,8 @@
         .evento-box strong { color: #5d4037; font-weight: 600; }
         .aviso-traje {
             background: #fff3cd; border: 4px dashed #a52a2a; padding: 18px;
-            margin: 30px 0 10px 0; border-radius: 10px; font-family: 'Lilita One', cursive;
-            color: #8b0000; font-size: 1.6em; text-align: center; text-transform: uppercase;
+            margin: 30px 0 10px 0; border-radius: 10px; font-family: 'Bungee', cursive;
+            color: #8b0000; font-size: 1.4em; text-align: center; text-transform: uppercase;
             letter-spacing: 1.5px;
         }
         form { text-align: left; }
@@ -79,8 +86,8 @@
         }
         button {
             background: #a52a2a; color: #fff8e1; padding: 18px; border: 4px solid #4e342e;
-            border-radius: 10px; font-size: 1.8em; cursor: pointer; width: 100%;
-            margin-top: 35px; font-family: 'Lilita One', cursive; text-transform: uppercase;
+            border-radius: 10px; font-size: 1.7em; cursor: pointer; width: 100%;
+            margin-top: 35px; font-family: 'Bungee', cursive; text-transform: uppercase;
             letter-spacing: 3px; box-shadow: 0 6px 0 #4e342e; transition: all 0.1s;
         }
         button:active { transform: translateY(4px); box-shadow: 0 2px 0 #4e342e; }
@@ -91,9 +98,9 @@
         }
         
         @media (max-width: 600px) {
-            .titulo-principal { font-size: 3em; }
-            .subtitulo-evento { font-size: 1.4em; }
-            .evento-box h3 { font-size: 1.7em; }
+            .titulo-principal { font-size: 2.8em; letter-spacing: 1px; }
+            .subtitulo-evento { font-size: 1.2em; }
+            .evento-box h3 { font-size: 1.5em; }
             form { padding: 0 10px; }
         }
     </style>
