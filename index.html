@@ -3,143 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian - Mi Bautizo y Cumpleaños</title>
+    <title>Invitación - La Granja de Sebastián</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@400;500;600&display=swap');
+
+    body {
+        font-family: 'Quicksand', sans-serif;
+        background: #f5f1e8;
+        color: #3e2723;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .banner-img {
+        max-width: 600px;
+        width: 100%;
+        border: 8px solid #fff;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        margin-bottom: 30px;
+        border-radius: 4px;
+    }
+
+    h1 {
+        font-family: 'Amatic SC', cursive;
+        font-size: 56px;
+        font-weight: 700;
+        color: #5d4037;
+        margin: 15px 0 5px;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        color: #8d6e63;
+        margin-bottom: 40px;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: left;
+        background: white;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #5d4037;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 22px;
+        border: 2px solid #d7ccc8;
+        border-radius: 6px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 16px;
+        background: #fff;
+        box-sizing: border-box;
+        transition: 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #8d6e63;
+        box-shadow: 0 0 0 3px rgba(141,110,99,0.1);
+    }
+
+    button {
+        width: 100%;
+        padding: 16px;
+        background: #6d4c41;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 28px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #5d4037;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(93,64,55,0.3);
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 48px;
+        }
+        form {
+            padding: 25px;
+        }
         body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: #8d6e63 url('https://www.transparenttextures.com/patterns/dark-wood.png');
-            padding: 15px; color: #3e2723;
+            padding: 15px;
         }
-        .container {
-            max-width: 650px; margin: 0 auto; background: #fdf6e3;
-            border-radius: 8px; overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            border: 10px solid #a52a2a;
-        }
-        .banner-link { display: block; line-height: 0; }
-        .banner-img { width: 100%; height: auto; display: block; cursor: pointer; }
-        .content {
-            padding: 30px 20px;
-            background: #fdf6e3 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-            text-align: center;
-        }
-        .titulo-principal {
-            font-family: Impact, 'Arial Black', sans-serif; color: #c41e1e; font-size: 3.2em;
-            letter-spacing: 3px; margin: 15px 0; line-height: 1;
-            text-shadow: -2px -2px 0 #f9a825, 2px -2px 0 #f9a825, -2px 2px 0 #f9a825, 2px 2px 0 #f9a825, 4px 0px #5d1a1a;
-            text-transform: uppercase;
-        }
-        .subtitulo-evento {
-            font-family: Impact, 'Arial Black', sans-serif; color: #5d4037; font-size: 1.4em;
-            margin-bottom: 20px; letter-spacing: 2px; display: flex;
-            align-items: center; justify-content: center; gap: 10px; flex-wrap: nowrap;
-            text-transform: uppercase;
-        }
-        .subtitulo-evento .estrellas { color: #f9a825; font-size: 0.8em; letter-spacing: 4px; flex-shrink: 0; }
-        .animalitos { font-size: 1.2em; letter-spacing: 8px; margin: 15px 0; display: block; }
-        .divisor { height: 4px; background: repeating-linear-gradient(90deg, #a52a2a, #a52a2a 10px, #f9a825 10px, #f9a825 20px); margin: 25px 0; }
-        .evento-box {
-            background: #fff; padding: 25px; border: 4px solid #795548;
-            border-radius: 5px; margin: 20px 0;
-            box-shadow: inset 0 0 15px rgba(121, 85, 72, 0.2); text-align: left;
-        }
-        .evento-box h3 { 
-            font-family: Impact, 'Arial Black', sans-serif; color: #a52a2a; 
-            font-size: 1.6em; margin-bottom: 15px; text-align: center; text-transform: uppercase;
-        }
-        .evento-box p { margin: 12px 0; font-size: 1.15em; font-weight: 600; line-height: 1.5; }
-        .evento-box strong { color: #5d4037; font-weight: 700; }
-        .aviso-traje {
-            background: #fff3cd; border: 3px dashed #a52a2a; padding: 15px;
-            margin: 25px 0 10px 0; border-radius: 8px; font-family: Impact, 'Arial Black', sans-serif;
-            color: #8b0000; font-size: 1.2em; font-weight: 700; text-align: center; text-transform: uppercase;
-        }
-        form { text-align: left; }
-        label { 
-            display: block; margin-top: 20px; font-weight: 700; color: #4e342e; 
-            font-size: 1.1em; font-family: Impact, 'Arial Black', sans-serif; 
-            text-align: center; text-transform: uppercase;
-        }
-        input, select, textarea {
-            width: 100%; padding: 14px; margin-top: 8px; border: 3px solid #a1887f;
-            border-radius: 5px; background: #fffef7; font-family: Georgia, serif;
-            font-size: 1em; font-weight: 600; text-align: center;
-        }
-        input:focus, select:focus, textarea:focus { border-color: #a52a2a; outline: none; background: #fff; }
-        button {
-            background: #a52a2a; color: #fff8e1; padding: 16px; border: 4px solid #4e342e;
-            border-radius: 8px; font-size: 1.4em; cursor: pointer; width: 100%;
-            margin-top: 30px; font-family: Impact, 'Arial Black', sans-serif; text-transform: uppercase;
-            letter-spacing: 2px; box-shadow: 0 5px 0 #4e342e; transition: all 0.1s;
-        }
-        button:active { transform: translateY(3px); box-shadow: 0 2px 0 #4e342e; }
-        .footer-granja {
-            text-align: center; margin-top: 30px; padding-top: 20px;
-            border-top: 4px dashed #a1887f; font-family: Impact, 'Arial Black', sans-serif;
-            color: #6d4c41; font-size: 1.3em; text-transform: uppercase;
-        }
+    }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="#formulario" class="banner-link">
-            <img src="invitacion.JPG" alt="Invitación Sebastian Granja" class="banner-img">
-        </a>
+        <img src="invitacion.png" alt="Invitación Sebastian Granja" class="banner-img">
         
-        <div class="content">
-            <h1 class="titulo-principal">SEBASTIAN</h1>
-            <div class="subtitulo-evento">
-                <span class="estrellas">★★</span>
-                MI CUMPLEAÑOS Y BAUTIZO
-                <span class="estrellas">★★</span>
-            </div>
+        <h1>La Granja de Sebastián</h1>
+        <p class="subtitle">ACOMPAÑANOS A CELEBRAR</p>
+
+        <form action="https://formsubmit.co/tucorreo@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://lagranjadesebastian.github.io/Lagranjadesebastian/gracias.html">
+            <input type="hidden" name="_captcha" value="false">
             
-            <div class="animalitos">🐄 🐖 🐑 🐴</div>
-            <div class="divisor"></div>
-            
-            <div class="evento-box">
-                <h3>Los esperamos en la granja</h3>
-                <p><strong>Fecha:</strong> Sábado 04 de Julio</p>
-                <p><strong>Misa:</strong> 4:00 pm en Santuario de Guadalupe</p>
-                <p><strong>Recepción:</strong> 6:00 pm <br>
-                Quinta Isla Mujeres<br>
-                Ayuntamiento #208 A, Ejido Piedras Negras</p>
-            </div>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-            <form id="formulario" action="https://formsubmit.co/santibalderas@hotmail.com" method="POST">
-                <label for="nombre">Nombre del Invitado:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <label for="asistencia">¿Confirmas tu asistencia?</label>
+            <select id="asistencia" name="asistencia" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Si asistiré">Sí, ahí estaré</option>
+                <option value="No podré asistir">No podré asistir</option>
+            </select>
 
-                <label for="asistencia">¿Confirmas tu asistencia?</label>
-                <select id="asistencia" name="asistencia" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="Sí asistiré">Sí, ahí estaré</option>
-                    <option value="No podré asistir">No podré asistir</option>
-                </select>
+            <label for="invitados">Número de acompañantes</label>
+            <select id="invitados" name="invitados" required>
+                <option value="">Selecciona</option>
+                <option value="0">Solo yo</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+            </select>
 
-                <label for="evento">¿A cuál evento asistes?</label>
-                <select id="evento" name="evento" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="Misa y Recepción">Misa y Recepción</option>
-                    <option value="Solo Misa">Solo Misa</option>
-                    <option value="Solo Recepción">Solo Recepción</option>
-                </select>
+            <label for="mensaje">Mensaje para Sebastián</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Déjale tus buenos deseos..."></textarea>
 
-                <label for="mensaje">Mensaje para Sebastian:</label>
-                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Felicidades por tu bautizo..."></textarea>
-
-                <input type="hidden" name="_subject" value="Nueva confirmación - Bautizo Sebastian">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://lagranjadesebastian.github.io/Lagranjadesebastian/gracias.html">
-                
-                <button type="submit">Confirmar</button>
-            </form>
-            
-            <p class="footer-granja">Gracias por acompañarnos</p>
-            <div class="aviso-traje">(NO OLVIDES TU TRAJE DE BAÑO)</div>
-        </div>
+            <button type="submit">Confirmar Asistencia</button>
+        </form>
     </div>
 </body>
 </html>
