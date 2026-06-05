@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! - La Granja de Sebastian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&family=Rye&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: #8d6e63 url('https://www.transparenttextures.com/patterns/dark-wood.png');
+            padding: 15px;
+            color: #3e2723;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: #fdf6e3;
+            border-radius: 8px;
+            padding: 40px 20px;
+            border: 10px solid #a52a2a;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+        h1 {
+            font-family: 'Sancreek', cursive;
+            color: #c41e1e;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            line-height: 1;
+            text-shadow: 
+                -2px -2px 0 #f9a825,  
+                 2px -2px 0 #f9a825,
+                -2px  2px 0 #f9a825,
+                 2px 0 #f9a825,
+                 4px  4px 0px #5d1a1a;
+        }
+        p {
+            font-family: 'Rye', cursive;
+            font-size: 1.4em;
+            color: #5d4037;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+        .animalitos {
+            font-size: 2em;
+            letter-spacing: 10px;
+            margin: 25px 0;
+        }
+        .aviso-traje {
+            background: #fff3cd;
+            border: 3px dashed #a52a2a;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-family: 'Rye', cursive;
+            color: #8b0000;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+        a {
+            display: inline-block;
+            background: #a52a2a;
+            color: #fff8e1;
+            padding: 15px 30px;
+            border: 4px solid #4e342e;
+            border-radius: 8px;
+            font-size: 1.2em;
+            text-decoration: none;
+            margin-top: 20px;
+            font-family: 'Sancreek', cursive;
+            text-transform: uppercase;
+            box-shadow: 0 5px 0 #4e342e;
+        }
+        a:active {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0 #4e342e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡MUCHAS GRACIAS!</h1>
+        <div class="animalitos">🐄 🐖 🐑 🐴</div>
+        <p>Tu confirmación fue enviada correctamente.</p>
+        <p>¡Te esperamos en la granja de Sebastian!</p>
+        <div class="aviso-traje">(NO OLVIDES TU TRAJE DE BAÑO)</div>
+        <a href="https://lagranjadesebastian.neocities.org">Regresar a la invitación</a>
+    </div>
+</body>
+</html>
